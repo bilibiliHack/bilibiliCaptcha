@@ -1,0 +1,21 @@
+{
+	"name":"bilibiliCaptcha.js",
+	"version":"0.0.1",
+	"description":"a little js program to recognize bilibili captcha",
+	"keywords":"bilibili captcha",
+	"url":"https://github.com/bilibiliHack/bilibiliCaptcha",
+	"email" : "manageryzy@gmail.com",
+	"license":"Apache",
+	"contributors":[
+		{
+			"name":"manageryzy",
+			"email":"manageryzy@gmail",
+			"url":"http://261day.com/"
+		}
+	],
+	"dependencies":{
+		"gm":"1.x",
+		"gm-buffer":"^0.0.3",
+		"wait.for":"^0.6.6"
+	}
+}
