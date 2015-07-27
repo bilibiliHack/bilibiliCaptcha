@@ -31,7 +31,6 @@ function Walk(path, floor, handleFile) {
                     }  
                 })  
             });  
-  
         }  
     });  
 }  
