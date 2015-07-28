@@ -2,3 +2,4 @@ bin/
 raw/
 node_modules/
 lable.txt
+*.pyc

@@ -5,6 +5,12 @@ var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
 function GenTrainSet(count) {
 	var codeList = '';
+
+	var res = childProcess.spawnSync('python',['-m','py_compile','./gen.py']);
+	console.log(res.stdout.toString())
+	if(res.error){
+		console.log(res.error);
+	}
 	
 	for(var i=0;i<count;i++){
 		var code = '';
@@ -17,7 +23,7 @@ function GenTrainSet(count) {
 	
 		codeList += path + ' ' + code + '\n';
 		
-		var res = childProcess.spawnSync('python',['./gen.py',code,path]);
+		res = childProcess.spawnSync('python',['./gen.pyc',code,path]);
 		console.log(res.stdout.toString())
 		if(res.error){
 			console.log(res.error);

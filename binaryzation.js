@@ -16,7 +16,7 @@ function bin(path, floor) {
 }
 
 function calcExtern(src,des) {
-	var res = childProcess.spawnSync('python',['./bin.py',src,des]);
+	var res = childProcess.spawnSync('python',['./bin.pyc',src,des]);
 	console.log(res.stdout.toString())
 	if(res.error){
 		console.log(res.error);
@@ -26,11 +26,21 @@ function calcExtern(src,des) {
 
 function Bin_test() {
 	out_path = './bin/test/'
+	var res = childProcess.spawnSync('python',['-m','py_compile','./bin.py']);
+	console.log(res.stdout.toString())
+	if(res.error){
+		console.log(res.error);
+	}
 	walkDir.walk('./raw/test',0,bin);
 }
 
 function Bin_train() {
 	out_path = './bin/train/'
+	var res = childProcess.spawnSync('python',['-m','py_compile','./bin.py']);
+	console.log(res.stdout.toString())
+	if(res.error){
+		console.log(res.error);
+	}
 	walkDir.walk('./raw/train',0,bin);
 }
 
