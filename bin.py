@@ -9,12 +9,12 @@ print sys.argv[1] + ' to ' + sys.argv[2]
 	
 im = Image.open(sys.argv[1])
 print im.format, im.size, im.mode
-im = im.convert('P', palette=Image.ADAPTIVE,colors=5)
+im = im.convert('P', palette=Image.ADAPTIVE,colors=7)
 pixels = list(im.getdata())
 width, height = im.size
 pixels = [pixels[i * width:(i + 1) * width] for i in xrange(height)]
 
-colors = [0,0,0,0,0,0]
+colors = [0,0,0,0,0,0,0,0,0,0]
 
 for w in xrange(width):
     for h in xrange(height):

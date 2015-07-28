@@ -21,8 +21,6 @@ function calcExtern(src,des) {
 	if(res.error){
 		console.log(res.error);
 	}
-	
-	setTimeout(calcExtern,0);
 }
 
 
